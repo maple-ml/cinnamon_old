@@ -1,8 +1,8 @@
 <div align="center">
 	<img src="https://github.com/maple-ml/cinnamon/blob/master/assets/banner-main.png?raw=true">
 </div>
+An ambitious attempt at creating a sustainable Geometry Dash mod loader.
 
-##### An ambitious attempt at creating a sustainable Geometry Dash mod loader.
 ----
 
 **Cinnamon** is a project that aims to implement advanced modding capabilities to Geometry Dash, while providing a stable interface for advanced usage natively in Geometry Dash. Alongside providing an interactive and innovative modal for developers to work off of, it aims to create a sustainable community and environment for that of creation, and prosperity.

@@ -65,7 +65,7 @@ DWORD WINAPI thread(void* hModule)
     println("INFO", fmt::format("Starting Cinnamon v{} for Geometry Dash {}", cinnamon_version(), gd_version()));
     println("INFO", fmt::format("Running on: x{}", architecture()));
     println("DEBUG", fmt::format("Module Address: {}", _MODULE_HANDLE));
-    println("DEBUG", fmt::format("Executable Path: {}", "d"));
+    println("DEBUG", fmt::format("Executable Path: {}", cinnamon::process::current_directory()));
 
     // initialize the script backend
     Py_Initialize();

@@ -1,6 +1,6 @@
 #ifndef _CINNAMON_H
 
-//#include "process.h"
+#include "process.h"
 
 // gd
 #include "gd/MenuLayer.h"

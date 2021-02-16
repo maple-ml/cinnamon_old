@@ -1,7 +1,7 @@
 #include <Windows.h>
 #include <string>
 
-/*namespace cinnamon::process
+namespace cinnamon::process
 {
 	const char* current_directory()
 	{
@@ -11,4 +11,4 @@
 
 		return std::string(buffer).substr(0, pos).c_str();
 	}
-}*/
+}

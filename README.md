@@ -1,7 +1,7 @@
 <div align="center">
 	<img src="https://github.com/maple-ml/cinnamon/blob/master/assets/banner-main.png?raw=true">
 </div>
-An ambitious attempt at creating a sustainable Geometry Dash mod loader.
+The lovable and adorable Geometry Dash modloader project.
 
 ----
 

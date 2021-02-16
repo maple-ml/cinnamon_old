@@ -1,0 +1,10 @@
+.vs
+Debug/
+Release/
+
+# Ignore Libraries.
+# We wish not to redistribute what is not ours, except for what is completely
+# required, such as the headers.
+*.lib
+*.aps
+*.rc

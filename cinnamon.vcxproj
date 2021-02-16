@@ -1,0 +1,533 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{28d6564e-8fb0-491f-8dc3-b303e02f9997}</ProjectGuid>
+    <RootNamespace>cinnamon</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <PreferredToolArchitecture>x86</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>incl\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;CINNAMON_EXPORTS;_WINDOWS;_USRDLL;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)incl\cappuccino-sdk\cocos2dx;$(SolutionDir)incl\cappuccino-sdk\cocos2dx\include;$(SolutionDir)incl\cappuccino-sdk\cocos2dx\kazmath\include;$(SolutionDir)incl\cappuccino-sdk\cocos2dx\platform\win32;$(SolutionDir)incl\cappuccino-sdk\cocos2dx\platform\third_party\win32;$(SolutionDir)incl\cappuccino-sdk\cocos2dx\platform\third_party\win32\OGLES;$(SolutionDir)incl\cappuccino-sdk\extensions;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>fmtd.lib;cappuccino.lib;libExtensions.lib;python39.lib;python39_d.lib;libMinHook-x86-v141-mtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;CINNAMON_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;CINNAMON_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>libMinHook-x86-v141-mtd.lib;python39.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;CINNAMON_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="incl\cappuccino-sdk\cocos2dx\ccConfig.h" />
+    <ClInclude Include="incl\cappuccino-sdk\cocos2dx\CCEventType.h" />
+    <ClInclude Include="incl\cappuccino-sdk\cocos2dx\ccMacros.h" />
+    <ClInclude Include="incl\cappuccino-sdk\cocos2dx\CCProtocols.h" />
+    <ClInclude Include="incl\cappuccino-sdk\cocos2dx\ccTypeInfo.h" />
+    <ClInclude Include="incl\cappuccino-sdk\cocos2dx\ccTypes.h" />
+    <ClInclude Include="incl\cappuccino-sdk\cocos2dx\cocos2d.h" />
+    <ClInclude Include="incl\cappuccino-sdk\cocos2dx\kazmath\src\keypad_dispatcher\CCKeypadDelegate.h" />
+    <ClInclude Include="incl\cappuccino-sdk\cocos2dx\kazmath\src\keypad_dispatcher\CCKeypadDispatcher.h" />
+    <ClInclude Include="incl\extensions\AssetsManager\AssetsManager.h" />
+    <ClInclude Include="incl\extensions\CCBReader\CCBAnimationManager.h" />
+    <ClInclude Include="incl\extensions\CCBReader\CCBFileLoader.h" />
+    <ClInclude Include="incl\extensions\CCBReader\CCBKeyframe.h" />
+    <ClInclude Include="incl\extensions\CCBReader\CCBMemberVariableAssigner.h" />
+    <ClInclude Include="incl\extensions\CCBReader\CCBReader.h" />
+    <ClInclude Include="incl\extensions\CCBReader\CCBSelectorResolver.h" />
+    <ClInclude Include="incl\extensions\CCBReader\CCBSequence.h" />
+    <ClInclude Include="incl\extensions\CCBReader\CCBSequenceProperty.h" />
+    <ClInclude Include="incl\extensions\CCBReader\CCBValue.h" />
+    <ClInclude Include="incl\extensions\CCBReader\CCControlButtonLoader.h" />
+    <ClInclude Include="incl\extensions\CCBReader\CCControlLoader.h" />
+    <ClInclude Include="incl\extensions\CCBReader\CCData.h" />
+    <ClInclude Include="incl\extensions\CCBReader\CCLabelBMFontLoader.h" />
+    <ClInclude Include="incl\extensions\CCBReader\CCLabelTTFLoader.h" />
+    <ClInclude Include="incl\extensions\CCBReader\CCLayerColorLoader.h" />
+    <ClInclude Include="incl\extensions\CCBReader\CCLayerGradientLoader.h" />
+    <ClInclude Include="incl\extensions\CCBReader\CCLayerLoader.h" />
+    <ClInclude Include="incl\extensions\CCBReader\CCMenuItemImageLoader.h" />
+    <ClInclude Include="incl\extensions\CCBReader\CCMenuItemLoader.h" />
+    <ClInclude Include="incl\extensions\CCBReader\CCMenuLoader.h" />
+    <ClInclude Include="incl\extensions\CCBReader\CCNode+CCBRelativePositioning.h" />
+    <ClInclude Include="incl\extensions\CCBReader\CCNodeLoader.h" />
+    <ClInclude Include="incl\extensions\CCBReader\CCNodeLoaderLibrary.h" />
+    <ClInclude Include="incl\extensions\CCBReader\CCNodeLoaderListener.h" />
+    <ClInclude Include="incl\extensions\CCBReader\CCParticleSystemQuadLoader.h" />
+    <ClInclude Include="incl\extensions\CCBReader\CCScale9SpriteLoader.h" />
+    <ClInclude Include="incl\extensions\CCBReader\CCScrollViewLoader.h" />
+    <ClInclude Include="incl\extensions\CCBReader\CCSpriteLoader.h" />
+    <ClInclude Include="incl\extensions\cocos-ext.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Action\CCActionEaseEx.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Action\CCActionFrame.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Action\CCActionFrameEasing.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Action\CCActionManager.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Action\CCActionNode.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Action\CCActionObject.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Armature\animation\CCArmatureAnimation.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Armature\animation\CCProcessBase.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Armature\animation\CCTween.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Armature\CCArmature.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Armature\CCBone.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Armature\datas\CCDatas.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Armature\display\CCBatchNode.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Armature\display\CCDecorativeDisplay.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Armature\display\CCDisplayFactory.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Armature\display\CCDisplayManager.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Armature\display\CCSkin.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Armature\external_tool\sigslot.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Armature\physics\CCColliderDetector.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Armature\utils\CCArmatureDataManager.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Armature\utils\CCArmatureDefine.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Armature\utils\CCDataReaderHelper.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Armature\utils\CCSpriteFrameCacheHelper.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Armature\utils\CCTransformHelp.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Armature\utils\CCTweenFunction.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Armature\utils\CCUtilMath.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Components\CCComAttribute.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Components\CCComAudio.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Components\CCComBase.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Components\CCComController.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Components\CCComRender.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Components\CCInputDelegate.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\GUI\BaseClasses\UIWidget.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\GUI\Layouts\UILayout.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\GUI\Layouts\UILayoutDefine.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\GUI\Layouts\UILayoutParameter.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\GUI\System\CocosGUI.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\GUI\System\GUIDefine.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\GUI\System\UIHelper.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\GUI\System\UITouchGroup.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\GUI\UIWidgets\Compatible\CompatibleClasses.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\GUI\UIWidgets\ScrollWidget\UIListView.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\GUI\UIWidgets\ScrollWidget\UIPageView.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\GUI\UIWidgets\ScrollWidget\UIScrollInterface.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\GUI\UIWidgets\ScrollWidget\UIScrollView.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\GUI\UIWidgets\UIButton.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\GUI\UIWidgets\UICheckBox.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\GUI\UIWidgets\UIImageView.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\GUI\UIWidgets\UILabel.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\GUI\UIWidgets\UILabelAtlas.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\GUI\UIWidgets\UILabelBMFont.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\GUI\UIWidgets\UILoadingBar.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\GUI\UIWidgets\UIRichText.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\GUI\UIWidgets\UISlider.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\GUI\UIWidgets\UITextField.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Json\DictionaryHelper.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Json\rapidjson\document.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Json\rapidjson\filestream.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Json\rapidjson\internal\pow10.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Json\rapidjson\internal\stack.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Json\rapidjson\internal\strfunc.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Json\rapidjson\prettywriter.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Json\rapidjson\rapidjson.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Json\rapidjson\reader.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Json\rapidjson\stringbuffer.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Json\rapidjson\writer.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Reader\GUIReader.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Reader\SceneReader.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Reader\WidgetReader\ButtonReader\ButtonReader.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Reader\WidgetReader\CheckBoxReader\CheckBoxReader.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Reader\WidgetReader\ImageViewReader\ImageViewReader.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Reader\WidgetReader\LabelAtlasReader\LabelAtlasReader.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Reader\WidgetReader\LabelBMFontReader\LabelBMFontReader.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Reader\WidgetReader\LabelReader\LabelReader.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Reader\WidgetReader\LayoutReader\LayoutReader.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Reader\WidgetReader\ListViewReader\ListViewReader.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Reader\WidgetReader\LoadingBarReader\LoadingBarReader.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Reader\WidgetReader\PageViewReader\PageViewReader.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Reader\WidgetReader\ScrollViewReader\ScrollViewReader.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Reader\WidgetReader\SliderReader\SliderReader.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Reader\WidgetReader\TextFieldReader\TextFieldReader.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Reader\WidgetReader\WidgetReader.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Reader\WidgetReader\WidgetReaderProtocol.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Trigger\ObjectFactory.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Trigger\TriggerBase.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Trigger\TriggerMng.h" />
+    <ClInclude Include="incl\extensions\CocoStudio\Trigger\TriggerObj.h" />
+    <ClInclude Include="incl\extensions\ExtensionMacros.h" />
+    <ClInclude Include="incl\extensions\GUI\CCControlExtension\CCControl.h" />
+    <ClInclude Include="incl\extensions\GUI\CCControlExtension\CCControlButton.h" />
+    <ClInclude Include="incl\extensions\GUI\CCControlExtension\CCControlColourPicker.h" />
+    <ClInclude Include="incl\extensions\GUI\CCControlExtension\CCControlExtensions.h" />
+    <ClInclude Include="incl\extensions\GUI\CCControlExtension\CCControlHuePicker.h" />
+    <ClInclude Include="incl\extensions\GUI\CCControlExtension\CCControlPotentiometer.h" />
+    <ClInclude Include="incl\extensions\GUI\CCControlExtension\CCControlSaturationBrightnessPicker.h" />
+    <ClInclude Include="incl\extensions\GUI\CCControlExtension\CCControlSlider.h" />
+    <ClInclude Include="incl\extensions\GUI\CCControlExtension\CCControlStepper.h" />
+    <ClInclude Include="incl\extensions\GUI\CCControlExtension\CCControlSwitch.h" />
+    <ClInclude Include="incl\extensions\GUI\CCControlExtension\CCControlUtils.h" />
+    <ClInclude Include="incl\extensions\GUI\CCControlExtension\CCInvocation.h" />
+    <ClInclude Include="incl\extensions\GUI\CCControlExtension\CCScale9Sprite.h" />
+    <ClInclude Include="incl\extensions\GUI\CCEditBox\CCEditBox.h" />
+    <ClInclude Include="incl\extensions\GUI\CCEditBox\CCEditBoxImpl.h" />
+    <ClInclude Include="incl\extensions\GUI\CCEditBox\CCEditBoxImplAndroid.h" />
+    <ClInclude Include="incl\extensions\GUI\CCEditBox\CCEditBoxImplIOS.h" />
+    <ClInclude Include="incl\extensions\GUI\CCEditBox\CCEditBoxImplMac.h" />
+    <ClInclude Include="incl\extensions\GUI\CCEditBox\CCEditBoxImplTizen.h" />
+    <ClInclude Include="incl\extensions\GUI\CCEditBox\CCEditBoxImplWin.h" />
+    <ClInclude Include="incl\extensions\GUI\CCEditBox\CCEditBoxImplWp8.h" />
+    <ClInclude Include="incl\extensions\GUI\CCScrollView\CCScrollView.h" />
+    <ClInclude Include="incl\extensions\GUI\CCScrollView\CCSorting.h" />
+    <ClInclude Include="incl\extensions\GUI\CCScrollView\CCTableView.h" />
+    <ClInclude Include="incl\extensions\GUI\CCScrollView\CCTableViewCell.h" />
+    <ClInclude Include="incl\extensions\LocalStorage\LocalStorage.h" />
+    <ClInclude Include="incl\extensions\network\HttpClient.h" />
+    <ClInclude Include="incl\extensions\network\HttpRequest.h" />
+    <ClInclude Include="incl\extensions\network\HttpResponse.h" />
+    <ClInclude Include="incl\extensions\network\WebSocket.h" />
+    <ClInclude Include="incl\extensions\physics_nodes\CCPhysicsDebugNode.h" />
+    <ClInclude Include="incl\extensions\physics_nodes\CCPhysicsSprite.h" />
+    <ClInclude Include="incl\extensions\spine\Animation.h" />
+    <ClInclude Include="incl\extensions\spine\AnimationState.h" />
+    <ClInclude Include="incl\extensions\spine\AnimationStateData.h" />
+    <ClInclude Include="incl\extensions\spine\Atlas.h" />
+    <ClInclude Include="incl\extensions\spine\AtlasAttachmentLoader.h" />
+    <ClInclude Include="incl\extensions\spine\Attachment.h" />
+    <ClInclude Include="incl\extensions\spine\AttachmentLoader.h" />
+    <ClInclude Include="incl\extensions\spine\Bone.h" />
+    <ClInclude Include="incl\extensions\spine\BoneData.h" />
+    <ClInclude Include="incl\extensions\spine\CCSkeleton.h" />
+    <ClInclude Include="incl\extensions\spine\CCSkeletonAnimation.h" />
+    <ClInclude Include="incl\extensions\spine\extension.h" />
+    <ClInclude Include="incl\extensions\spine\Json.h" />
+    <ClInclude Include="incl\extensions\spine\RegionAttachment.h" />
+    <ClInclude Include="incl\extensions\spine\Skeleton.h" />
+    <ClInclude Include="incl\extensions\spine\SkeletonData.h" />
+    <ClInclude Include="incl\extensions\spine\SkeletonJson.h" />
+    <ClInclude Include="incl\extensions\spine\Skin.h" />
+    <ClInclude Include="incl\extensions\spine\Slot.h" />
+    <ClInclude Include="incl\extensions\spine\SlotData.h" />
+    <ClInclude Include="incl\extensions\spine\spine-cocos2dx.h" />
+    <ClInclude Include="incl\extensions\spine\spine.h" />
+    <ClInclude Include="incl\fmt\chrono.h" />
+    <ClInclude Include="incl\fmt\color.h" />
+    <ClInclude Include="incl\fmt\compile.h" />
+    <ClInclude Include="incl\fmt\core.h" />
+    <ClInclude Include="incl\fmt\format-inl.h" />
+    <ClInclude Include="incl\fmt\format.h" />
+    <ClInclude Include="incl\fmt\locale.h" />
+    <ClInclude Include="incl\fmt\os.h" />
+    <ClInclude Include="incl\fmt\ostream.h" />
+    <ClInclude Include="incl\fmt\posix.h" />
+    <ClInclude Include="incl\fmt\printf.h" />
+    <ClInclude Include="incl\fmt\ranges.h" />
+    <ClInclude Include="incl\MinHook.h" />
+    <ClInclude Include="incl\python\abstract.h" />
+    <ClInclude Include="incl\python\asdl.h" />
+    <ClInclude Include="incl\python\ast.h" />
+    <ClInclude Include="incl\python\bitset.h" />
+    <ClInclude Include="incl\python\bltinmodule.h" />
+    <ClInclude Include="incl\python\boolobject.h" />
+    <ClInclude Include="incl\python\bytearrayobject.h" />
+    <ClInclude Include="incl\python\bytesobject.h" />
+    <ClInclude Include="incl\python\cellobject.h" />
+    <ClInclude Include="incl\python\ceval.h" />
+    <ClInclude Include="incl\python\classobject.h" />
+    <ClInclude Include="incl\python\code.h" />
+    <ClInclude Include="incl\python\codecs.h" />
+    <ClInclude Include="incl\python\compile.h" />
+    <ClInclude Include="incl\python\complexobject.h" />
+    <ClInclude Include="incl\python\context.h" />
+    <ClInclude Include="incl\python\cpython\abstract.h" />
+    <ClInclude Include="incl\python\cpython\bytearrayobject.h" />
+    <ClInclude Include="incl\python\cpython\bytesobject.h" />
+    <ClInclude Include="incl\python\cpython\ceval.h" />
+    <ClInclude Include="incl\python\cpython\code.h" />
+    <ClInclude Include="incl\python\cpython\dictobject.h" />
+    <ClInclude Include="incl\python\cpython\fileobject.h" />
+    <ClInclude Include="incl\python\cpython\fileutils.h" />
+    <ClInclude Include="incl\python\cpython\frameobject.h" />
+    <ClInclude Include="incl\python\cpython\import.h" />
+    <ClInclude Include="incl\python\cpython\initconfig.h" />
+    <ClInclude Include="incl\python\cpython\interpreteridobject.h" />
+    <ClInclude Include="incl\python\cpython\listobject.h" />
+    <ClInclude Include="incl\python\cpython\methodobject.h" />
+    <ClInclude Include="incl\python\cpython\object.h" />
+    <ClInclude Include="incl\python\cpython\objimpl.h" />
+    <ClInclude Include="incl\python\cpython\pyerrors.h" />
+    <ClInclude Include="incl\python\cpython\pylifecycle.h" />
+    <ClInclude Include="incl\python\cpython\pymem.h" />
+    <ClInclude Include="incl\python\cpython\pystate.h" />
+    <ClInclude Include="incl\python\cpython\sysmodule.h" />
+    <ClInclude Include="incl\python\cpython\traceback.h" />
+    <ClInclude Include="incl\python\cpython\tupleobject.h" />
+    <ClInclude Include="incl\python\cpython\unicodeobject.h" />
+    <ClInclude Include="incl\python\datetime.h" />
+    <ClInclude Include="incl\python\descrobject.h" />
+    <ClInclude Include="incl\python\dictobject.h" />
+    <ClInclude Include="incl\python\dynamic_annotations.h" />
+    <ClInclude Include="incl\python\enumobject.h" />
+    <ClInclude Include="incl\python\errcode.h" />
+    <ClInclude Include="incl\python\eval.h" />
+    <ClInclude Include="incl\python\exports.h" />
+    <ClInclude Include="incl\python\fileobject.h" />
+    <ClInclude Include="incl\python\fileutils.h" />
+    <ClInclude Include="incl\python\floatobject.h" />
+    <ClInclude Include="incl\python\frameobject.h" />
+    <ClInclude Include="incl\python\funcobject.h" />
+    <ClInclude Include="incl\python\genericaliasobject.h" />
+    <ClInclude Include="incl\python\genobject.h" />
+    <ClInclude Include="incl\python\graminit.h" />
+    <ClInclude Include="incl\python\grammar.h" />
+    <ClInclude Include="incl\python\import.h" />
+    <ClInclude Include="incl\python\internal\pegen_interface.h" />
+    <ClInclude Include="incl\python\internal\pycore_abstract.h" />
+    <ClInclude Include="incl\python\internal\pycore_accu.h" />
+    <ClInclude Include="incl\python\internal\pycore_atomic.h" />
+    <ClInclude Include="incl\python\internal\pycore_byteswap.h" />
+    <ClInclude Include="incl\python\internal\pycore_bytes_methods.h" />
+    <ClInclude Include="incl\python\internal\pycore_call.h" />
+    <ClInclude Include="incl\python\internal\pycore_ceval.h" />
+    <ClInclude Include="incl\python\internal\pycore_code.h" />
+    <ClInclude Include="incl\python\internal\pycore_condvar.h" />
+    <ClInclude Include="incl\python\internal\pycore_context.h" />
+    <ClInclude Include="incl\python\internal\pycore_dtoa.h" />
+    <ClInclude Include="incl\python\internal\pycore_fileutils.h" />
+    <ClInclude Include="incl\python\internal\pycore_gc.h" />
+    <ClInclude Include="incl\python\internal\pycore_getopt.h" />
+    <ClInclude Include="incl\python\internal\pycore_gil.h" />
+    <ClInclude Include="incl\python\internal\pycore_hamt.h" />
+    <ClInclude Include="incl\python\internal\pycore_hashtable.h" />
+    <ClInclude Include="incl\python\internal\pycore_import.h" />
+    <ClInclude Include="incl\python\internal\pycore_initconfig.h" />
+    <ClInclude Include="incl\python\internal\pycore_interp.h" />
+    <ClInclude Include="incl\python\internal\pycore_object.h" />
+    <ClInclude Include="incl\python\internal\pycore_pathconfig.h" />
+    <ClInclude Include="incl\python\internal\pycore_pyerrors.h" />
+    <ClInclude Include="incl\python\internal\pycore_pyhash.h" />
+    <ClInclude Include="incl\python\internal\pycore_pylifecycle.h" />
+    <ClInclude Include="incl\python\internal\pycore_pymem.h" />
+    <ClInclude Include="incl\python\internal\pycore_pystate.h" />
+    <ClInclude Include="incl\python\internal\pycore_runtime.h" />
+    <ClInclude Include="incl\python\internal\pycore_sysmodule.h" />
+    <ClInclude Include="incl\python\internal\pycore_traceback.h" />
+    <ClInclude Include="incl\python\internal\pycore_tupleobject.h" />
+    <ClInclude Include="incl\python\internal\pycore_warnings.h" />
+    <ClInclude Include="incl\python\interpreteridobject.h" />
+    <ClInclude Include="incl\python\intrcheck.h" />
+    <ClInclude Include="incl\python\iterobject.h" />
+    <ClInclude Include="incl\python\listobject.h" />
+    <ClInclude Include="incl\python\longintrepr.h" />
+    <ClInclude Include="incl\python\longobject.h" />
+    <ClInclude Include="incl\python\marshal.h" />
+    <ClInclude Include="incl\python\memoryobject.h" />
+    <ClInclude Include="incl\python\methodobject.h" />
+    <ClInclude Include="incl\python\modsupport.h" />
+    <ClInclude Include="incl\python\moduleobject.h" />
+    <ClInclude Include="incl\python\namespaceobject.h" />
+    <ClInclude Include="incl\python\node.h" />
+    <ClInclude Include="incl\python\object.h" />
+    <ClInclude Include="incl\python\objimpl.h" />
+    <ClInclude Include="incl\python\odictobject.h" />
+    <ClInclude Include="incl\python\opcode.h" />
+    <ClInclude Include="incl\python\osdefs.h" />
+    <ClInclude Include="incl\python\osmodule.h" />
+    <ClInclude Include="incl\python\parsetok.h" />
+    <ClInclude Include="incl\python\patchlevel.h" />
+    <ClInclude Include="incl\python\picklebufobject.h" />
+    <ClInclude Include="incl\python\pyarena.h" />
+    <ClInclude Include="incl\python\pycapsule.h" />
+    <ClInclude Include="incl\python\pyconfig.h" />
+    <ClInclude Include="incl\python\pyctype.h" />
+    <ClInclude Include="incl\python\pydebug.h" />
+    <ClInclude Include="incl\python\pydtrace.h" />
+    <ClInclude Include="incl\python\pyerrors.h" />
+    <ClInclude Include="incl\python\pyexpat.h" />
+    <ClInclude Include="incl\python\pyfpe.h" />
+    <ClInclude Include="incl\python\pyframe.h" />
+    <ClInclude Include="incl\python\pyhash.h" />
+    <ClInclude Include="incl\python\pylifecycle.h" />
+    <ClInclude Include="incl\python\pymacconfig.h" />
+    <ClInclude Include="incl\python\pymacro.h" />
+    <ClInclude Include="incl\python\pymath.h" />
+    <ClInclude Include="incl\python\pymem.h" />
+    <ClInclude Include="incl\python\pyport.h" />
+    <ClInclude Include="incl\python\pystate.h" />
+    <ClInclude Include="incl\python\pystrcmp.h" />
+    <ClInclude Include="incl\python\pystrhex.h" />
+    <ClInclude Include="incl\python\pystrtod.h" />
+    <ClInclude Include="incl\python\Python-ast.h" />
+    <ClInclude Include="incl\python\Python.h" />
+    <ClInclude Include="incl\python\pythonrun.h" />
+    <ClInclude Include="incl\python\pythread.h" />
+    <ClInclude Include="incl\python\pytime.h" />
+    <ClInclude Include="incl\python\py_curses.h" />
+    <ClInclude Include="incl\python\rangeobject.h" />
+    <ClInclude Include="incl\python\setobject.h" />
+    <ClInclude Include="incl\python\sliceobject.h" />
+    <ClInclude Include="incl\python\structmember.h" />
+    <ClInclude Include="incl\python\structseq.h" />
+    <ClInclude Include="incl\python\symtable.h" />
+    <ClInclude Include="incl\python\sysmodule.h" />
+    <ClInclude Include="incl\python\token.h" />
+    <ClInclude Include="incl\python\traceback.h" />
+    <ClInclude Include="incl\python\tracemalloc.h" />
+    <ClInclude Include="incl\python\tupleobject.h" />
+    <ClInclude Include="incl\python\typeslots.h" />
+    <ClInclude Include="incl\python\ucnhash.h" />
+    <ClInclude Include="incl\python\unicodeobject.h" />
+    <ClInclude Include="incl\python\warnings.h" />
+    <ClInclude Include="incl\python\weakrefobject.h" />
+    <ClInclude Include="global.hpp" />
+    <ClInclude Include="lib\cinnamon.h" />
+    <ClInclude Include="lib\gd\FLAlertLayer.h" />
+    <ClInclude Include="lib\gd\MenuLayer.h" />
+    <ClInclude Include="lib\process.h" />
+    <ClInclude Include="lib\core\ModsButton.h" />
+    <ClInclude Include="modules\FDirectory.h" />
+    <ClInclude Include="modules\fs.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="lib\gd\MenuLayer.cpp" />
+    <ClCompile Include="lib\process.cpp" />
+    <ClCompile Include="lib\core\ModsButton.cpp" />
+    <ClCompile Include="modules\FDirectory.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
+    <None Include="README.md" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

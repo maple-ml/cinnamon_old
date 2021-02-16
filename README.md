@@ -4,7 +4,7 @@
 The lovable and adorable Geometry Dash modloader.
 
 <div>
-    <a href="https://discord.gg/jHWE33TkJb"><img src="https://canary.discordapp.com/api/guilds/810630217605054474/widget.png?style=banner2" alt="Join Discord Server"/></a>
+    <a href="https://discord.gg/jHWE33TkJb"><img src="https://canary.discordapp.com/api/guilds/810630217605054474/widget.png?style=shield" alt="Join Discord Server"/></a>
 </div>
 
 ----

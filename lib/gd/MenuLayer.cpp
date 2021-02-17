@@ -2,7 +2,7 @@
 
 #include "../../incl/MinHook.h"
 //#include "../core/ModsButton.h"
-#include "addresses.h"
+#include "../../addresses.h"
 
 void MenuLayer::hook()
 {

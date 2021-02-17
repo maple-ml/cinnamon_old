@@ -1,24 +1,40 @@
+#include "incl/fmt/core.h"
+#include "incl/MinHook.h"
+#include "lib/process.h"
+
 #include <iostream>
 #include <filesystem>
 #include <iomanip>
 #include <sstream>
 #include <ctime>
 #include <string>
+
+#include "modules/fs.h"
+#include "incl/python/Python.h"
+
 #include <windows.h>
 
-#include "incl/fmt/core.h"
-#include "incl/python/Python.h"
-#include "incl/MinHook.h"
-
 #include "global.hpp"
-#include "lib/cinnamon.h"
-#include "lib/process.h"
-#include "modules/fs.h"
+#include "lib/gd/addresses.h"
+//#include "lib/cinnamon.h"
 
 namespace stdfs = std::filesystem;
 namespace fs = cinnamon::fs;
 
 /// WARNING: If you don't know what you're doing, please avoid everything below here. ///
+
+std::wstring s2ws(const std::string& s)
+{
+    int len;
+    int slength = (int)s.length() + 1;
+    len = MultiByteToWideChar(CP_ACP, 0, s.c_str(), slength, 0, 0);
+    wchar_t* buf = new wchar_t[len];
+    MultiByteToWideChar(CP_ACP, 0, s.c_str(), slength, buf, len);
+    std::wstring r(buf);
+    delete[] buf;
+    return r;
+}
+
 void println(std::string title, std::string msg)
 {
     auto t = std::time(nullptr);
@@ -35,8 +51,14 @@ void init_hook()
     println("DEBUG", "Loading hooks...");
     MH_Initialize();
     println("DEBUG", "Hooking: MenuLayer");
-    MenuLayer::hook();
+    //MenuLayer::hook();
     MH_EnableHook(MH_ALL_HOOKS);
+    println("DEBUG", "Hooks loaded!");
+}
+
+void init_python()
+{
+    println("DEBUG", "Loading Python API...");
 }
 
 void init()
@@ -50,13 +72,18 @@ void init()
     // init hooks
     init_hook();
 }
+
 DWORD WINAPI thread(void* hModule)
 {
     // create console
     AllocConsole();
-	
-    std::string title = fmt::format("Cinnamon {} - running Geometry Dash {}", cinnamon_version(), gd_version());
-    SetConsoleTitle(LPCWSTR(title.c_str()));
+
+	// painfully set the title
+    std::wstring title = s2ws(std::string("Cinnamon ")
+						+ std::string(cinnamon_version())
+						+ std::string(" - running Geometry Dash ")
+                        + std::string(gd_version()));
+	SetConsoleTitle(title.c_str());
 
     // open stdout
     freopen("CONOUT$", "w", stdout);

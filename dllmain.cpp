@@ -14,8 +14,8 @@
 
 #include <windows.h>
 
+#include "addresses.h"
 #include "global.hpp"
-#include "lib/gd/addresses.h"
 //#include "lib/cinnamon.h"
 
 namespace stdfs = std::filesystem;

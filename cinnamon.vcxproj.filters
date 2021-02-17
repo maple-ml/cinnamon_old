@@ -492,9 +492,6 @@
     <ClInclude Include="incl\python\weakrefobject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="modules\FDirectory.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="modules\fs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1086,18 +1083,21 @@
     <ClInclude Include="lib\gd\FLAlertLayer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="lib\core\ModsButton.h">
+    <ClInclude Include="addresses.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="addresses.h">
+    <ClInclude Include="modules\Directory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\tinydir.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\core\cocos\ModsButton.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="modules\FDirectory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="lib\gd\MenuLayer.cpp">
@@ -1106,7 +1106,10 @@
     <ClCompile Include="lib\process.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="lib\core\ModsButton.cpp">
+    <ClCompile Include="modules\Directory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\core\cocos\ModsButton.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

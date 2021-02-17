@@ -88,7 +88,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;CINNAMON_EXPORTS;_WINDOWS;_USRDLL;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;CINNAMON_EXPORTS;_WINDOWS;_USRDLL;_CRT_SECURE_NO_WARNINGS;_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
@@ -514,16 +514,17 @@
     <ClInclude Include="lib\gd\FLAlertLayer.h" />
     <ClInclude Include="lib\gd\MenuLayer.h" />
     <ClInclude Include="lib\process.h" />
-    <ClInclude Include="lib\core\ModsButton.h" />
-    <ClInclude Include="modules\FDirectory.h" />
+    <ClInclude Include="lib\core\cocos\ModsButton.h" />
+    <ClInclude Include="lib\tinydir.h" />
+    <ClInclude Include="modules\Directory.h" />
     <ClInclude Include="modules\fs.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="lib\gd\MenuLayer.cpp" />
     <ClCompile Include="lib\process.cpp" />
-    <ClCompile Include="lib\core\ModsButton.cpp" />
-    <ClCompile Include="modules\FDirectory.cpp" />
+    <ClCompile Include="lib\core\cocos\ModsButton.cpp" />
+    <ClCompile Include="modules\Directory.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />

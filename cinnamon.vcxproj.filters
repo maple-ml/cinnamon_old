@@ -1089,6 +1089,9 @@
     <ClInclude Include="lib\core\ModsButton.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="addresses.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">

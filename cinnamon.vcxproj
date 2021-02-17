@@ -100,6 +100,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
       <AdditionalDependencies>fmtd.lib;cappuccino.lib;libExtensions.lib;python39.lib;python39_d.lib;libMinHook-x86-v141-mtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/NODEFAULTLIB:libcmtd.lib %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -509,6 +510,7 @@
     <ClInclude Include="incl\python\weakrefobject.h" />
     <ClInclude Include="global.hpp" />
     <ClInclude Include="lib\cinnamon.h" />
+    <ClInclude Include="addresses.h" />
     <ClInclude Include="lib\gd\FLAlertLayer.h" />
     <ClInclude Include="lib\gd\MenuLayer.h" />
     <ClInclude Include="lib\process.h" />

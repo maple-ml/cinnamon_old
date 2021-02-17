@@ -3,14 +3,14 @@
 
 using namespace cocos2d;
 
-class MenuLayer
+
+namespace MenuLayer
 {
-public:
-	static void hook();
-	static void unhook();
+	void hook();
+	void unhook();
 
 	CCLayer* self;
 	
-	static bool(__thiscall* init)(cocos2d::CCLayer* self);
-	static bool __fastcall _init(CCLayer* self);
+	inline bool(__thiscall* init)(CCLayer* self);
+	bool __fastcall _init(CCLayer* self);
 };

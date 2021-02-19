@@ -516,6 +516,7 @@
     <ClInclude Include="lib\process.h" />
     <ClInclude Include="lib\core\cocos\ModsButton.h" />
     <ClInclude Include="lib\tinydir.h" />
+    <ClInclude Include="Mod.h" />
     <ClInclude Include="modules\Directory.h" />
     <ClInclude Include="modules\fs.h" />
   </ItemGroup>
@@ -524,6 +525,7 @@
     <ClCompile Include="lib\gd\MenuLayer.cpp" />
     <ClCompile Include="lib\process.cpp" />
     <ClCompile Include="lib\core\cocos\ModsButton.cpp" />
+    <ClCompile Include="Mod.cpp" />
     <ClCompile Include="modules\Directory.cpp" />
   </ItemGroup>
   <ItemGroup>

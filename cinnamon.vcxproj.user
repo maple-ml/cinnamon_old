@@ -3,4 +3,9 @@
   <PropertyGroup>
     <ShowAllFiles>true</ShowAllFiles>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LocalDebuggerCommand>C:\Program Files %28x86%29\Steam\steamapps\common\Geometry Dash\GeometryDash.exe</LocalDebuggerCommand>
+    <LocalDebuggerWorkingDirectory>..\Program Files %28x86%29\Steam\steamapps\common\Geometry Dash</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
 </Project>

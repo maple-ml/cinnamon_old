@@ -1095,6 +1095,9 @@
     <ClInclude Include="lib\core\cocos\ModsButton.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Mod.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -1110,6 +1113,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="lib\core\cocos\ModsButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Mod.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

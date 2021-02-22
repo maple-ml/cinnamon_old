@@ -114,20 +114,30 @@ int find_path()
 
     bool found = false;
 
+    println("DEBUG", path);
+	
+
 	for (const auto &strpath : paths)
 	{
-		if (strpath.find("Python39-32") != string::npos)
-		{
-			// found path
-			if (strpath.find("Scripts") == string::npos)
-			{
-				// ignore Scripts path
-                println("DEBUG", strpath);
-                setenv("PYPATH", strpath.c_str(), 0);
+		if (strpath.find("Python39") != string::npos)
+        {
+            println("DEBUG", "A");
+            // found path
+            if (strpath.find("32") != string::npos)
+            {
+                println("DEBUG", "B");
+                // it's 32 bit
+                if (strpath.find("Scripts") == string::npos)
+                {
+                    println("DEBUG", "C");
+                    // ignore Scripts path
+                    println("DEBUG", strpath);
+                    setenv("PYPATH", strpath.c_str(), 0);
 
-                found = true;
-                break;
-			}
+                    found = true;
+                    break;
+                }
+            }
 		}
 	}
 
@@ -258,7 +268,7 @@ void init_python()
     else
     {
     	// display warning
-        system("cls");
+        /*system("cls");
 
     	// change title
         wstring title = s2ws(string("Cinnamon ")
@@ -281,7 +291,7 @@ void init_python()
         cout << "             Thank you!" << endl;
         cout << "              - The Cinnamon Dev Team" << endl;
         cout << " " << endl;
-        cout << "            PS: We appreciate your usage of our modloader!" << endl;
+        cout << "            PS: We appreciate your usage of our modloader!" << endl;*/
     }
 }
 

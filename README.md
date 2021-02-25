@@ -10,7 +10,7 @@
 
 ----
 
-**Cinnamon** is a project that aims to implement advanced modding capabilities to Geometry Dash, while providing a stable interface for advanced usage natively in Geometry Dash. Alongside providing an interactive and innovative modal for developers to work off of, it aims to create a sustainable community and environment for that of creation, and prosperity.
+**Cinnamon** is a project that aims to implement advanced modding capabilities to Geometry Dash, while providing a stable interface for advanced usage natively in Geometry Dash. Alongside providing an interactive and innovative model for developers to work off of, it aims to create a sustainable community and environment for that of creation, and prosperity.
 
 ## Objectives
 * Provide a comprehensive API for interfacing with Geometry Dash.
@@ -44,7 +44,6 @@ We have not written a building guide, as this project is primarily self-explanat
 This section will be community managed, otherwise.
 
 ## Contributions
-All contributions are appreciated, as to improve the mode on its playability and functionality. As this project isn't perfect, we would enjoy all additions to the code through bugfixing and ideas. Contributions should be done over an issue or a pull request, to give maintainers a chance to review changes to the codebase.
 
 For new ideas and features, we would prefer for you to write an issue before trying to add it to show the maintainers.
 
